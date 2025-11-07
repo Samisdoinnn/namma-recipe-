@@ -1,0 +1,103 @@
+{
+  "home": {
+    "title": "व्यंजन",
+    "searchPlaceholder": "व्यंजन खोजें...",
+    "categories": "श्रेणियाँ",
+    "featured": "विशेष व्यंजन",
+    "recent": "हाल के व्यंजन",
+    "popular": "लोकप्रिय व्यंजन",
+    "noRecipes": "कोई व्यंजन नहीं मिला"
+  },
+  "recipeDetail": {
+    "servings": "परोसने की संख्या",
+    "prepTime": "तैयारी का समय",
+    "cookTime": "पकाने का समय",
+    "difficulty": "कठिनाई",
+    "ingredients": "सामग्री",
+    "instructions": "निर्देश",
+    "save": "सहेजें",
+    "share": "साझा करें",
+    "saved": "सहेजा गया",
+    "step": "चरण {{number}}"
+  },
+  "favorites": {
+    "title": "पसंदीदा",
+    "empty": "अभी तक कोई पसंदीदा व्यंजन नहीं",
+    "emptyDescription": "अन्वेषण करना शुरू करें और अपने पसंदीदा व्यंजनों को सहेजें!"
+  },
+  "search": {
+    "title": "खोजें",
+    "filters": "फ़िल्टर",
+    "tags": "टैग",
+    "difficulty": "कठिनाई",
+    "prepTime": "तैयारी का समय",
+    "apply": "फ़िल्टर लागू करें",
+    "clear": "सभी साफ़ करें",
+    "results": "{{count}} परिणाम मिले",
+    "enterQuery": "खोज क्वेरी दर्ज करें",
+    "noResults": "कोई व्यंजन नहीं मिला"
+  },
+  "addRecipe": {
+    "title": "व्यंजन जोड़ें",
+    "editTitle": "व्यंजन संपादित करें",
+    "recipeName": "व्यंजन का नाम",
+    "description": "विवरण",
+    "servings": "परोसने की संख्या",
+    "prepTime": "तैयारी का समय (मिनट)",
+    "cookTime": "पकाने का समय (मिनट)",
+    "difficulty": "कठिनाई",
+    "ingredients": "सामग्री",
+    "addIngredient": "सामग्री जोड़ें",
+    "instructions": "निर्देश",
+    "addStep": "चरण जोड़ें",
+    "tags": "टैग",
+    "photo": "व्यंजन की फोटो",
+    "publish": "व्यंजन प्रकाशित करें",
+    "save": "ड्राफ्ट सहेजें"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "account": "खाता",
+    "preferences": "प्राथमिकताएँ",
+    "language": "भाषा",
+    "measurementSystem": "माप प्रणाली",
+    "metric": "मीट्रिक",
+    "imperial": "इंपीरियल",
+    "theme": "थीम",
+    "light": "लाइट",
+    "dark": "डार्क",
+    "auto": "ऑटो",
+    "notifications": "सूचनाएं",
+    "logout": "लॉगआउट",
+    "logoutConfirm": "क्या आप वाकई लॉगआउट करना चाहते हैं?"
+  },
+  "auth": {
+    "login": "लॉगिन",
+    "signup": "साइन अप",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "displayName": "प्रदर्शन नाम",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "or": "या",
+    "googleSignIn": "Google के साथ जारी रखें",
+    "noAccount": "खाता नहीं है? साइन अप करें",
+    "hasAccount": "पहले से खाता है? लॉगिन करें"
+  },
+  "common": {
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "save": "सहेजें",
+    "loading": "लोड हो रहा है...",
+    "error": "कुछ गलत हो गया",
+    "retry": "पुनः प्रयास करें",
+    "minutes": "{{count}} मिनट",
+    "easy": "आसान",
+    "medium": "मध्यम",
+    "hard": "कठिन",
+    "copiedToClipboard": "क्लिपबोर्ड पर कॉपी किया गया",
+    "shareRecipe": "इस व्यंजन को देखें: {{title}}"
+  }
+}

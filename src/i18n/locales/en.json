@@ -1,0 +1,103 @@
+{
+  "home": {
+    "title": "Recipes",
+    "searchPlaceholder": "Search recipes...",
+    "categories": "Categories",
+    "featured": "Featured Recipes",
+    "recent": "Recent Recipes",
+    "popular": "Popular Recipes",
+    "noRecipes": "No recipes found"
+  },
+  "recipeDetail": {
+    "servings": "Servings",
+    "prepTime": "Prep Time",
+    "cookTime": "Cook Time",
+    "difficulty": "Difficulty",
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "save": "Save",
+    "share": "Share",
+    "saved": "Saved",
+    "step": "Step {{number}}"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorite recipes yet",
+    "emptyDescription": "Start exploring and save your favorite recipes!"
+  },
+  "search": {
+    "title": "Search",
+    "filters": "Filters",
+    "tags": "Tags",
+    "difficulty": "Difficulty",
+    "prepTime": "Prep Time",
+    "apply": "Apply Filters",
+    "clear": "Clear All",
+    "results": "{{count}} results found",
+    "enterQuery": "Enter search query",
+    "noResults": "No recipes found"
+  },
+  "addRecipe": {
+    "title": "Add Recipe",
+    "editTitle": "Edit Recipe",
+    "recipeName": "Recipe Name",
+    "description": "Description",
+    "servings": "Servings",
+    "prepTime": "Prep Time (minutes)",
+    "cookTime": "Cook Time (minutes)",
+    "difficulty": "Difficulty",
+    "ingredients": "Ingredients",
+    "addIngredient": "Add Ingredient",
+    "instructions": "Instructions",
+    "addStep": "Add Step",
+    "tags": "Tags",
+    "photo": "Recipe Photo",
+    "publish": "Publish Recipe",
+    "save": "Save Draft"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "preferences": "Preferences",
+    "language": "Language",
+    "measurementSystem": "Measurement System",
+    "metric": "Metric",
+    "imperial": "Imperial",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto",
+    "notifications": "Notifications",
+    "logout": "Logout",
+    "logoutConfirm": "Are you sure you want to logout?"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "displayName": "Display Name",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "or": "OR",
+    "googleSignIn": "Continue with Google",
+    "noAccount": "Don't have an account? Sign Up",
+    "hasAccount": "Already have an account? Login"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "minutes": "{{count}} min",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "copiedToClipboard": "Copied to clipboard",
+    "shareRecipe": "Check out this recipe: {{title}}"
+  }
+}
