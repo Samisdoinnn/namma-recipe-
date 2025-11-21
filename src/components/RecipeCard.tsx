@@ -15,6 +15,7 @@ import Animated, {
   withSpring,
   withTiming,
   interpolate,
+  Extrapolate,
 } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Recipe } from '@/types';
@@ -39,6 +40,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
   const { t } = useTranslation();
   const scale = useSharedValue(1);
   const heartScale = useSharedValue(1);
+  const rotation = useSharedValue(0);
 
   const difficultyColor = {
     easy: COLORS.tagEasy,
@@ -47,23 +49,38 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
   }[recipe.difficulty];
 
   const animatedCardStyle = useAnimatedStyle(() => {
+    const rotate = interpolate(
+      rotation.value,
+      [0, 1],
+      [0, 2],
+      Extrapolate.CLAMP
+    );
+    
     return {
-      transform: [{ scale: scale.value }],
+      transform: [
+        { scale: scale.value },
+        { rotate: `${rotate}deg` }
+      ],
     };
   });
 
   const animatedHeartStyle = useAnimatedStyle(() => {
     return {
-      transform: [{ scale: heartScale.value }],
+      transform: [
+        { scale: heartScale.value },
+        { rotate: `${interpolate(heartScale.value, [1, 1.5], [0, 360])}deg` }
+      ],
     };
   });
 
   const handlePressIn = () => {
     scale.value = withSpring(0.95);
+    rotation.value = withTiming(1, { duration: 200 });
   };
 
   const handlePressOut = () => {
     scale.value = withSpring(1);
+    rotation.value = withTiming(0, { duration: 200 });
   };
 
   const handleFavorite = () => {
@@ -109,6 +126,14 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
           <View style={[styles.difficultyBadge, { backgroundColor: difficultyColor }]}>
             <Text style={styles.difficultyText}>{t(`common.${recipe.difficulty}`)}</Text>
           </View>
+          
+          {/* Cooking Time Badge */}
+          <View style={styles.timeBadge}>
+            <Ionicons name="time-outline" size={14} color={COLORS.textInverse} />
+            <Text style={styles.timeText}>
+              {t('common.minutes', { count: recipe.prepTime + recipe.cookTime })}
+            </Text>
+          </View>
         </View>
         
         <View style={styles.content}>
@@ -117,14 +142,12 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
           </Text>
           <View style={styles.meta}>
             <View style={styles.metaItem}>
-              <Ionicons name="time-outline" size={16} color={COLORS.primary} />
-              <Text style={styles.metaText}>
-                {t('common.minutes', { count: recipe.prepTime + recipe.cookTime })}
-              </Text>
-            </View>
-            <View style={styles.metaItem}>
               <Ionicons name="restaurant-outline" size={16} color={COLORS.primary} />
-              <Text style={styles.metaText}>{recipe.servings}</Text>
+              <Text style={styles.metaText}>{recipe.servings} servings</Text>
+            </View>
+            <View style={styles.ratingContainer}>
+              <Ionicons name="star" size={16} color={COLORS.warning} />
+              <Text style={styles.ratingText}>4.8</Text>
             </View>
           </View>
         </View>
@@ -187,6 +210,23 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     textTransform: 'uppercase',
   },
+  timeBadge: {
+    position: 'absolute',
+    top: SPACING.sm,
+    left: SPACING.sm,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: BORDER_RADIUS.lg,
+    paddingHorizontal: SPACING.sm,
+    paddingVertical: SPACING.xs,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  timeText: {
+    color: COLORS.textInverse,
+    fontSize: TYPOGRAPHY.fontSize.xs,
+    fontWeight: '600',
+  },
   content: {
     padding: SPACING.md,
   },
@@ -206,6 +246,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
+  },
+  ratingContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  ratingText: {
+    fontSize: TYPOGRAPHY.fontSize.sm,
+    color: COLORS.text,
+    fontWeight: '600',
   },
   metaText: {
     fontSize: TYPOGRAPHY.fontSize.sm,
